@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm — MT Parfum</title>
+  <meta name="description" content="Bộ sưu tập nước hoa MT Parfum — Nomad Wood Eau de Parfum với 3 dung tích 10ml, 50ml, 100ml.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="products">
+
+  <section class="page-hero">
+    <div class="wrap reveal">
+      <span class="eyebrow">Bộ sưu tập</span>
+      <h1>Sản phẩm</h1>
+      <p>Fine fragrance made with character — nước hoa được tạo nên cho cá tính riêng của bạn.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:34px;flex-wrap:wrap;gap:12px">
+        <span class="label-sm" id="count"></span>
+        <span class="label-sm">Sắp xếp: Nổi bật</span>
+      </div>
+      <div class="grid-products" id="allGrid"></div>
+    </div>
+  </section>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/catalog.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderGrid("#allGrid");
+      qs("#count").textContent = PRODUCTS.length + " sản phẩm";
+    });
+  </script>
+</body>
+</html>
