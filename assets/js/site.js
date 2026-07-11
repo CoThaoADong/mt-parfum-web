@@ -169,6 +169,7 @@ function buildLayout() {
       <div class="footer__bottom">
         <span>© ${new Date().getFullYear()} MT Parfum. Bản quyền thuộc về thương hiệu MT Parfum.</span>
         <span>Thiết kế theo tinh thần tối giản · tinh tế · ấm áp.</span>
+        <span>Design by Nguyễn Văn Quí 05</span>
       </div>
     </div>`;
   document.body.appendChild(footer);
