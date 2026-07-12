@@ -7,12 +7,12 @@ const SITE = {
   brand: "MT PARFUM",
   sub: "Fine Fragrance",
   tagline: "Fine fragrance made with character",
-  phone: "0909 000 000",
+  phone: "0799 909 698",
   email: "hello@mtparfum.vn",
   address: "366/20H Lê Văn Quới, P. Bình Hưng Hòa, TP. Hồ Chí Minh",
-  company: "Công ty TNHH Dược Mỹ Phẩm DC COS (SUNCOS GROUP)",
+  company: "Công ty TNHH Dược Mỹ Phẩm DC COS",
   madein: "Sản xuất tại Việt Nam",
-  socials: { facebook: "#", instagram: "#", tiktok: "#" },
+  socials: { facebook: "#", instagram: "#", tiktok: "https://www.tiktok.com/@giohangcuamtparfum" },
 };
 
 /* Định dạng tiền Việt */
@@ -30,9 +30,9 @@ const PRODUCTS = [
     badge: "Best Seller",
     tagline: "Fine fragrance made with character",
     short:
-      "Hương gỗ ấm áp, nam tính và lưu hương lâu — dấu ấn riêng cho người tìm kiếm sự tinh tế, tự tin và khác biệt.",
+      "Hương gỗ hiện đại, thanh lịch và đầy bản lĩnh — dành cho những người yêu sự tối giản nhưng khác biệt, phù hợp cho cả nam và nữ.",
     intro:
-      "Nomad Wood mở đầu bằng làn hương gỗ trầm ấm, quyện cùng nốt hương thiên nhiên tinh tế, để lại dư hương sang trọng và bền bỉ suốt cả ngày. Một mùi hương được tạo nên cho những người tự tin viết nên phong cách của riêng mình.",
+      "Nomad Wood là mùi hương dành cho những người yêu thích sự tối giản nhưng khác biệt. Một hương thơm mang đậm chất gỗ hiện đại, cân bằng giữa nét thanh lịch, mạnh mẽ và cuốn hút — không quá nồng, không quá ngọt, tạo dấu ấn bằng cảm giác sạch sẽ, tinh tế và sang trọng.",
     card: "assets/images/beige_100_box.jpg",
     variants: [
       {
@@ -80,7 +80,11 @@ const PRODUCTS = [
     ],
     details: {
       "Mô tả sản phẩm":
-        "<p>MT Parfum – Nomad Wood là dòng nước hoa Eau de Parfum cao cấp mang hương gỗ ấm, sang trọng và lưu hương lâu. Lấy cảm hứng từ thiên nhiên, mùi hương được thiết kế dành cho cá tính riêng của mỗi người — tinh tế, tự tin và khác biệt.</p><p style='margin-top:10px'>Chai thủy tinh dày dặn, nắp kim loại tông đồng/xám khói, nhãn giấy trắng ngà — trọn vẹn tinh thần tối giản, ấm áp của thương hiệu.</p>",
+        "<p>Nomad Wood là mùi hương dành cho những người yêu thích sự tối giản nhưng khác biệt. Một hương thơm mang đậm chất gỗ hiện đại, cân bằng giữa nét thanh lịch, mạnh mẽ và cuốn hút, phù hợp cho cả nam và nữ.</p><p style='margin-top:10px'>Không quá nồng, không quá ngọt, Nomad Wood tạo nên dấu ấn bằng cảm giác sạch sẽ, tinh tế và sang trọng. Đây là lựa chọn lý tưởng cho môi trường công sở, những buổi gặp gỡ đối tác hay các dịp đặc biệt, đồng thời cũng đủ linh hoạt để trở thành mùi hương sử dụng hằng ngày.</p><p style='margin-top:10px'>Chai thủy tinh dày dặn, nắp kim loại tông đồng/xám khói, nhãn giấy trắng ngà — trọn vẹn tinh thần tối giản, ấm áp của thương hiệu.</p>",
+      "Tầng hương":
+        "<h4 style='font-family:var(--serif);font-size:17px;margin-bottom:6px;color:var(--ink)'>Hương đầu</h4><ul><li>Bạch đậu khấu (Cardamom)</li><li>Lá Violet</li><li>Hoa Iris</li></ul><p style='margin:8px 0 18px'>Sự kết hợp của bạch đậu khấu cay nhẹ cùng lá violet và hoa iris mang đến cảm giác tươi mới, thanh lịch và đầy cuốn hút ngay từ những giây phút đầu tiên.</p><h4 style='font-family:var(--serif);font-size:17px;margin-bottom:6px;color:var(--ink)'>Hương giữa</h4><ul><li>Gỗ đàn hương Úc (Australian Sandalwood)</li><li>Gỗ tuyết tùng (Cedarwood)</li><li>Papyrus</li></ul><p style='margin:8px 0 18px'>Gỗ đàn hương Úc mềm mại hòa quyện cùng gỗ tuyết tùng và papyrus tạo nên chiều sâu, mang đến cảm giác khô ráo, sạch sẽ và đầy nam tính nhưng vẫn đủ tinh tế cho cả nữ giới.</p><h4 style='font-family:var(--serif);font-size:17px;margin-bottom:6px;color:var(--ink)'>Hương cuối</h4><ul><li>Da thuộc (Leather Accord)</li><li>Xạ hương (Musk)</li><li>Hổ phách (Amber)</li></ul><p style='margin-top:8px'>Sự ấm áp của hổ phách, nét sang trọng của da thuộc và sự mềm mại của xạ hương lưu lại trên da một cách tự nhiên, tạo cảm giác gần gũi nhưng khó quên.</p>",
+      "Phong cách &amp; Độ lưu hương":
+        "<ul><li>Hương gỗ hiện đại (Modern Woody)</li><li>Thanh lịch – Sang trọng – Cá tính</li><li>Unisex, phù hợp cho cả nam và nữ</li><li>Thích hợp sử dụng quanh năm, đặc biệt vào mùa thu, đông hoặc trong môi trường máy lạnh</li></ul><p style='margin-top:16px'><b>Lưu hương:</b> khoảng 8–12 giờ (tùy cơ địa và môi trường sử dụng).<br><b>Tỏa hương:</b> trong phạm vi khoảng một cánh tay trong những giờ đầu, sau đó trở nên nhẹ nhàng và gần gũi.</p><p style='margin-top:16px'><b>Dành cho ai?</b> Nomad Wood dành cho những người theo đuổi phong cách tối giản, yêu thích sự tinh tế và muốn tạo dấu ấn bằng một mùi hương khác biệt — không chỉ là một chai nước hoa mà còn là tuyên ngôn về cá tính, sự tự tin và phong cách sống hiện đại.</p>",
       "Thành phần (Ingredients)":
         "<ul><li>Alcohol</li><li>Fragrance</li><li>Water</li><li>PPG-20 Methyl Glucose Ether</li><li>Dipropylene Glycol</li><li>Phenoxyethanol</li></ul>",
       "Hướng dẫn sử dụng (Directions)":

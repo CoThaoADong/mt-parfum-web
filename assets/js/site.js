@@ -136,9 +136,9 @@ function buildLayout() {
           <a href="index.html" class="logo" style="text-align:left"><b>MT PARFUM</b><span style="letter-spacing:.4em">Fine Fragrance</span></a>
           <p style="margin-top:16px;max-width:300px">${SITE.tagline.toUpperCase()}. Nước hoa được tạo nên cho sự tinh tế, tự tin và cá tính riêng.</p>
           <div class="socials">
-            <a href="${SITE.socials.facebook}" aria-label="Facebook">${IC.fb}</a>
-            <a href="${SITE.socials.instagram}" aria-label="Instagram">${IC.ig}</a>
-            <a href="${SITE.socials.tiktok}" aria-label="TikTok">${IC.tk}</a>
+            <a href="${SITE.socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.fb}</a>
+            <a href="${SITE.socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.ig}</a>
+            <a href="${SITE.socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${IC.tk}</a>
           </div>
         </div>
         <div class="footer__col">
