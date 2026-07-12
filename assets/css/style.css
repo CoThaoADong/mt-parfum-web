@@ -482,6 +482,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.1; 
 @media (min-width: 640px) {
   .grid-products { grid-template-columns: repeat(2, 1fr); }
   .specs { grid-template-columns: repeat(3, 1fr); }
+  .specs--two { grid-template-columns: repeat(2, 1fr); max-width: 640px; margin-inline: auto; }
   .footer__cols { grid-template-columns: 1.4fr 1fr 1fr; }
   .modal__box { grid-template-columns: 1fr 1fr; }
 }
