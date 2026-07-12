@@ -121,13 +121,6 @@ function pdQty(d) { PD.qty = Math.max(1, PD.qty + d); qs("#pdQtyVal").textConten
 function pdAdd() { Cart.add(PD.product, currentVariant(), PD.qty); }
 function pdBuyNow() { Cart.add(PD.product, currentVariant(), PD.qty); setTimeout(checkout, 400); }
 
-function toggleAcc(btn) {
-  const item = btn.closest(".acc__item");
-  const panel = item.querySelector(".acc__panel");
-  const isOpen = item.classList.contains("open");
-  if (isOpen) { item.classList.remove("open"); panel.style.maxHeight = 0; }
-  else { item.classList.add("open"); panel.style.maxHeight = panel.scrollHeight + "px"; }
-}
 function openFirstPanel() {
   const first = qs("#pdAcc .acc__item.open .acc__panel");
   if (first) first.style.maxHeight = first.scrollHeight + "px";

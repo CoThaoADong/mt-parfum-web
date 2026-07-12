@@ -153,10 +153,10 @@ function buildLayout() {
         <div class="footer__col">
           <h4>Chính sách</h4>
           <ul>
-            <li><a href="#" onclick="return policy('Chính sách vận chuyển')">Vận chuyển</a></li>
-            <li><a href="#" onclick="return policy('Chính sách đổi trả')">Đổi trả &amp; hoàn tiền</a></li>
-            <li><a href="#" onclick="return policy('Chính sách bảo mật')">Bảo mật</a></li>
-            <li><a href="#" onclick="return policy('Hướng dẫn mua hàng')">Hướng dẫn mua hàng</a></li>
+            <li><a href="policies.html#huong-dan">Hướng dẫn mua hàng</a></li>
+            <li><a href="policies.html#van-chuyen">Vận chuyển</a></li>
+            <li><a href="policies.html#doi-tra">Đổi trả &amp; bảo hành</a></li>
+            <li><a href="policies.html#bao-mat">Bảo mật</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -237,7 +237,6 @@ function checkout() {
   toast("Đơn hàng demo — em sẽ nối cổng thanh toán khi chị cần bán thật.");
 }
 function subscribe(e) { e.preventDefault(); e.target.reset(); toast("Cảm ơn bạn đã đăng ký nhận tin!"); return false; }
-function policy(name) { toast(name + " — nội dung đang được cập nhật."); return false; }
 
 /* ---------- Toast ---------- */
 let toastTimer;
@@ -275,6 +274,15 @@ function initReveal() {
     window.addEventListener("resize", checkReveal);
     window.addEventListener("load", checkReveal);
   }
+}
+
+/* ---------- Accordion (dùng chung: trang chi tiết sản phẩm, chính sách...) ---------- */
+function toggleAcc(btn) {
+  const item = btn.closest(".acc__item");
+  const panel = item.querySelector(".acc__panel");
+  const isOpen = item.classList.contains("open");
+  if (isOpen) { item.classList.remove("open"); panel.style.maxHeight = 0; }
+  else { item.classList.add("open"); panel.style.maxHeight = panel.scrollHeight + "px"; }
 }
 
 /* ---------- helpers ---------- */
