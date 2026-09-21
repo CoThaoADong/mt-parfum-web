@@ -17,7 +17,7 @@ const SITE = {
   /* ⬇️ CHƯA CÔNG BỐ GIÁ: để false → web ẩn giá, hiện "Liên hệ" + nút đặt hàng qua Zalo.
         Khi nào có giá chính thức, đổi thành true là giá hiện lại (giá lưu sẵn trong PRODUCTS). */
   showPrice: false,
-  priceNote: "Giá: Liên hệ",
+  priceNote: "Coming Soon",
   zalo: "https://zalo.me/0799909698",
 };
 

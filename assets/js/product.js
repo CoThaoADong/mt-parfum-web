@@ -56,7 +56,7 @@ function renderProduct() {
             <a class="btn btn--solid" style="flex:1" href="${orderHref()}" target="_blank" rel="noopener">Liên hệ đặt hàng</a>
             <a class="btn btn--outline" href="tel:${SITE.phone.replace(/\\s/g,'')}">Gọi ${SITE.phone}</a>
           </div>
-          <p style="font-size:13px;color:var(--muted);margin:-4px 0 4px;line-height:1.6">Giá đang được cập nhật — nhắn Zalo hoặc gọi hotline để được tư vấn &amp; báo giá nhanh nhất.</p>`}
+          <p style="font-size:13px;color:var(--muted);margin:-4px 0 4px;line-height:1.6">Sản phẩm sắp ra mắt — nhắn Zalo hoặc gọi hotline để đặt trước &amp; nhận báo giá sớm nhất.</p>`}
 
           <ul class="pdp__meta">
             <li>${IC.check} Hàng chính hãng · Cam kết 100% nước hoa thật</li>
