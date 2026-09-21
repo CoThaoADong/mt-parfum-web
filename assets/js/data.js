@@ -33,21 +33,22 @@ const PRODUCTS = [
       "Hương gỗ hiện đại, thanh lịch và đầy bản lĩnh — dành cho những người yêu sự tối giản nhưng khác biệt, phù hợp cho cả nam và nữ.",
     intro:
       "Nomad Wood là mùi hương dành cho những người yêu thích sự tối giản nhưng khác biệt. Một hương thơm mang đậm chất gỗ hiện đại, cân bằng giữa nét thanh lịch, mạnh mẽ và cuốn hút — không quá nồng, không quá ngọt, tạo dấu ấn bằng cảm giác sạch sẽ, tinh tế và sang trọng.",
-    card: "assets/images/beige_100_box.jpg",
+    card: "assets/images/that_100_chai.jpg",
     variants: [
       {
         size: "10ml",
         fl: "0.34 FL.OZ",
         price: 250000,
         compareAt: 0,
-        image: "assets/images/dark_10_marble.jpg",
+        image: "assets/images/that_10_chai.jpg",
         gallery: [
+          "assets/images/that_10_chai.jpg",
+          "assets/images/that_10_vial.jpg",
+          "assets/images/that_10_hop.jpg",
+          "assets/images/that_bo_dayodu.jpg",
           "assets/images/dark_10_marble.jpg",
-          "assets/images/dark_10_silk.jpg",
-          "assets/images/dark_10_marble2.jpg",
           "assets/images/dark_10_open.jpg",
           "assets/images/dark_thankyou_10.jpg",
-          "assets/images/pack_3sizes.jpg",
         ],
       },
       {
@@ -55,17 +56,16 @@ const PRODUCTS = [
         fl: "1.7 FL.OZ",
         price: 690000,
         compareAt: 0,
-        image: "assets/images/gold_50_arch.jpg",
+        image: "assets/images/that_50_chai.jpg",
         gallery: [
+          "assets/images/that_50_chai.jpg",
+          "assets/images/that_50_hop.jpg",
+          "assets/images/that_chai_sach.jpg",
+          "assets/images/that_bo_sanpham.jpg",
           "assets/images/gold_50_arch.jpg",
           "assets/images/forest_50_box.jpg",
-          "assets/images/gold_50_circle.jpg",
           "assets/images/dark_50_wood.jpg",
-          "assets/images/dark_50_sphere.jpg",
-          "assets/images/dark_50_box.jpg",
-          "assets/images/cream_50_arch.jpg",
           "assets/images/panel_50.jpg",
-          "assets/images/pack_50_3d.jpg",
         ],
       },
       {
@@ -73,15 +73,15 @@ const PRODUCTS = [
         fl: "3.4 FL.OZ",
         price: 1090000,
         compareAt: 0,
-        image: "assets/images/beige_100_box.jpg",
+        image: "assets/images/that_100_chai.jpg",
         gallery: [
-          "assets/images/beige_100_box.jpg",
+          "assets/images/that_100_chai.jpg",
+          "assets/images/that_100_hop.jpg",
+          "assets/images/that_chai_hop_xep.jpg",
+          "assets/images/that_bo_dayodu.jpg",
           "assets/images/beige_100_wide.jpg",
-          "assets/images/beige_100_wave.jpg",
           "assets/images/beige_duo_spec.jpg",
           "assets/images/panel_100.jpg",
-          "assets/images/dark_thankyou_50100.jpg",
-          "assets/images/pack_3sizes.jpg",
         ],
       },
     ],
@@ -89,9 +89,9 @@ const PRODUCTS = [
       "Mô tả sản phẩm":
         "<p>Nomad Wood là mùi hương dành cho những người yêu thích sự tối giản nhưng khác biệt. Một hương thơm mang đậm chất gỗ hiện đại, cân bằng giữa nét thanh lịch, mạnh mẽ và cuốn hút, phù hợp cho cả nam và nữ.</p><p style='margin-top:10px'>Không quá nồng, không quá ngọt, Nomad Wood tạo nên dấu ấn bằng cảm giác sạch sẽ, tinh tế và sang trọng. Đây là lựa chọn lý tưởng cho môi trường công sở, những buổi gặp gỡ đối tác hay các dịp đặc biệt, đồng thời cũng đủ linh hoạt để trở thành mùi hương sử dụng hằng ngày.</p><p style='margin-top:10px'>Chai thủy tinh dày dặn, nắp kim loại tông đồng/xám khói, nhãn giấy trắng ngà — trọn vẹn tinh thần tối giản, ấm áp của thương hiệu.</p>",
       "Tầng hương":
-        "<h4 style='font-family:var(--serif);font-size:17px;margin-bottom:6px;color:var(--ink)'>Hương đầu</h4><ul><li>Bạch đậu khấu (Cardamom)</li><li>Lá Violet</li><li>Hoa Iris</li></ul><p style='margin:8px 0 18px'>Sự kết hợp của bạch đậu khấu cay nhẹ cùng lá violet và hoa iris mang đến cảm giác tươi mới, thanh lịch và đầy cuốn hút ngay từ những giây phút đầu tiên.</p><h4 style='font-family:var(--serif);font-size:17px;margin-bottom:6px;color:var(--ink)'>Hương giữa</h4><ul><li>Gỗ đàn hương Úc (Australian Sandalwood)</li><li>Gỗ tuyết tùng (Cedarwood)</li><li>Papyrus</li></ul><p style='margin:8px 0 18px'>Gỗ đàn hương Úc mềm mại hòa quyện cùng gỗ tuyết tùng và papyrus tạo nên chiều sâu, mang đến cảm giác khô ráo, sạch sẽ và đầy nam tính nhưng vẫn đủ tinh tế cho cả nữ giới.</p><h4 style='font-family:var(--serif);font-size:17px;margin-bottom:6px;color:var(--ink)'>Hương cuối</h4><ul><li>Da thuộc (Leather Accord)</li><li>Xạ hương (Musk)</li><li>Hổ phách (Amber)</li></ul><p style='margin-top:8px'>Sự ấm áp của hổ phách, nét sang trọng của da thuộc và sự mềm mại của xạ hương lưu lại trên da một cách tự nhiên, tạo cảm giác gần gũi nhưng khó quên.</p>",
+        "<h4 style='font-family:var(--serif);font-size:17px;margin-bottom:2px;color:var(--ink)'>Hương đầu</h4><div style='font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px'>0 – 20 phút đầu</div><ul><li>Bạch đậu khấu (Cardamom)</li><li>Lá violet</li><li>Hoa iris</li></ul><p style='margin:8px 0 18px'>Cay ấm nhẹ, xanh mát và sạch sẽ — cảm giác tươi mới như một căn phòng vừa lau dọn xong, thanh lịch và cuốn hút ngay từ những giây phút đầu tiên.</p><h4 style='font-family:var(--serif);font-size:17px;margin-bottom:2px;color:var(--ink)'>Hương giữa</h4><div style='font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px'>20 phút – vài giờ</div><ul><li>Gỗ đàn hương Úc (Australian Sandalwood)</li><li>Gỗ tuyết tùng (Cedarwood)</li><li>Papyrus</li></ul><p style='margin:8px 0 18px'>Gỗ đàn hương Úc mềm và béo nhẹ hòa cùng gỗ tuyết tùng khô sắc, thêm chút giấy và chút khói của papyrus — tạo chiều sâu khô ráo, sạch sẽ, nam tính mà vẫn đủ tinh tế cho cả nữ giới.</p><h4 style='font-family:var(--serif);font-size:17px;margin-bottom:2px;color:var(--ink)'>Hương cuối</h4><div style='font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px'>Lưu lại lâu nhất</div><ul><li>Da thuộc (Leather Accord)</li><li>Xạ hương (Musk)</li><li>Hổ phách (Amber)</li></ul><p style='margin-top:8px'>Da thuộc sang trọng, xạ hương mềm mại và hổ phách ấm áp lưu lại trên da một cách tự nhiên — bám vải rất tốt, gợi và khó quên.</p>",
       "Phong cách &amp; Độ lưu hương":
-        "<ul><li>Hương gỗ hiện đại (Modern Woody)</li><li>Thanh lịch – Sang trọng – Cá tính</li><li>Unisex, phù hợp cho cả nam và nữ</li><li>Thích hợp sử dụng quanh năm, đặc biệt vào mùa thu, đông hoặc trong môi trường máy lạnh</li></ul><p style='margin-top:16px'><b>Lưu hương:</b> khoảng 8–12 giờ (tùy cơ địa và môi trường sử dụng).<br><b>Tỏa hương:</b> trong phạm vi khoảng một cánh tay trong những giờ đầu, sau đó trở nên nhẹ nhàng và gần gũi.</p><p style='margin-top:16px'><b>Dành cho ai?</b> Nomad Wood dành cho những người theo đuổi phong cách tối giản, yêu thích sự tinh tế và muốn tạo dấu ấn bằng một mùi hương khác biệt — không chỉ là một chai nước hoa mà còn là tuyên ngôn về cá tính, sự tự tin và phong cách sống hiện đại.</p>",
+        "<ul><li>Hương gỗ hiện đại (Modern Woody) — gỗ khói kem, sạch mà ấm</li><li>Thanh lịch · Sang trọng · Cá tính</li><li>Unisex — phù hợp cho cả nam và nữ</li><li>Thích hợp quanh năm, đặc biệt vào thu, đông hoặc trong môi trường máy lạnh</li><li>Hợp môi trường công sở, gặp gỡ đối tác, dịp đặc biệt — và đủ linh hoạt để dùng hằng ngày</li></ul><p style='margin-top:16px'><b>Lưu hương:</b> khoảng 8–12 giờ (tùy cơ địa và môi trường sử dụng).<br><b>Tỏa hương:</b> trong phạm vi khoảng một cánh tay ở những giờ đầu, sau đó nhẹ nhàng và gần gũi hơn.</p><p style='margin-top:16px'>Ban ngày, Nomad Wood nghe chỉn chu và sạch sẽ. Về tối, khi da ấm lên, tầng da thuộc và hổ phách nổi rõ hơn — ấm, gợi, khiến người ta muốn đứng gần hơn.</p>",
       "Thành phần (Ingredients)":
         "<ul><li>Alcohol</li><li>Fragrance</li><li>Water</li><li>PPG-20 Methyl Glucose Ether</li><li>Dipropylene Glycol</li><li>Phenoxyethanol</li></ul>",
       "Hướng dẫn sử dụng (Directions)":
