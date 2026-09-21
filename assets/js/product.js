@@ -37,11 +37,12 @@ function renderProduct() {
           <div class="type">${p.type} · ${p.family}</div>
           <h1>${p.name}</h1>
           <p class="lead">${p.intro}</p>
-          <div class="pdp__price" id="pdPrice">${vnd(v.price)} <small>/ ${v.size}</small></div>
+          <div class="pdp__price" id="pdPrice">${SITE.showPrice ? `${vnd(v.price)} <small>/ ${v.size}</small>` : SITE.priceNote}</div>
 
           <div class="opt-label">Chọn dung tích</div>
           <div class="pills" id="pdPills"></div>
 
+          ${SITE.showPrice ? `
           <div class="pdp__buy">
             <div class="qty">
               <button onclick="pdQty(-1)" aria-label="Giảm">–</button>
@@ -50,7 +51,12 @@ function renderProduct() {
             </div>
             <button class="btn btn--outline" onclick="pdAdd()">Thêm vào giỏ</button>
             <button class="btn btn--solid" onclick="pdBuyNow()">Mua ngay</button>
+          </div>` : `
+          <div class="pdp__buy">
+            <a class="btn btn--solid" style="flex:1" href="${orderHref()}" target="_blank" rel="noopener">Liên hệ đặt hàng</a>
+            <a class="btn btn--outline" href="tel:${SITE.phone.replace(/\\s/g,'')}">Gọi ${SITE.phone}</a>
           </div>
+          <p style="font-size:13px;color:var(--muted);margin:-4px 0 4px;line-height:1.6">Giá đang được cập nhật — nhắn Zalo hoặc gọi hotline để được tư vấn &amp; báo giá nhanh nhất.</p>`}
 
           <ul class="pdp__meta">
             <li>${IC.check} Hàng chính hãng · Cam kết 100% nước hoa thật</li>
@@ -105,13 +111,13 @@ function toggleZoom() { qs("#galMain").classList.toggle("zoomed"); }
 function renderPills() {
   qs("#pdPills").innerHTML = PD.product.variants.map((vr, i) => `
     <button class="pill ${i === PD.variantIndex ? "active" : ""}" onclick="pdSelect(${i})">
-      ${vr.size}<small>${vnd(vr.price)}</small>
+      ${vr.size}${SITE.showPrice ? `<small>${vnd(vr.price)}</small>` : ""}
     </button>`).join("");
 }
 function pdSelect(i) {
   PD.variantIndex = i; PD.galleryIndex = 0;
   const v = currentVariant();
-  qs("#pdPrice").innerHTML = `${vnd(v.price)} <small>/ ${v.size}</small>`;
+  qs("#pdPrice").innerHTML = SITE.showPrice ? `${vnd(v.price)} <small>/ ${v.size}</small>` : SITE.priceNote;
   const img = qs("#galImg");
   img.style.opacity = 0;
   setTimeout(() => { img.src = v.gallery[0]; img.style.opacity = 1; }, 180);

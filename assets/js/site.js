@@ -75,9 +75,9 @@ function buildLayout() {
           ${NAV.slice(2).map((n) => `<a href="${n.href}" class="${page === n.key ? "is-active" : ""}">${n.label}</a>`).join("")}
         </nav>
         <button class="icon-btn" aria-label="Tìm kiếm" onclick="toast('Tính năng tìm kiếm sẽ sớm ra mắt')">${IC.search}</button>
-        <button class="icon-btn" aria-label="Giỏ hàng" onclick="openDrawer()">
+        ${SITE.showPrice ? `<button class="icon-btn" aria-label="Giỏ hàng" onclick="openDrawer()">
           ${IC.cart}<span class="cart-count" id="cartCount">0</span>
-        </button>
+        </button>` : `<a class="icon-btn" aria-label="Liên hệ đặt hàng" href="${SITE.zalo}" target="_blank" rel="noopener">${IC.phone}</a>`}
         <button class="hamburger" aria-label="Menu" onclick="openMenu()"><span></span><span></span><span></span></button>
       </div>
     </div>`;
@@ -198,8 +198,10 @@ function unlock() { if (!qs("#cartDrawer").classList.contains("open")) document.
 
 /* ---------- Render cart ---------- */
 function renderCart() {
+  const badge = qs("#cartCount");
+  if (!badge) return; // giỏ hàng bị ẩn khi chưa công bố giá
   const body = qs("#drawerBody"), foot = qs("#drawerFoot");
-  const badge = qs("#cartCount"), dCount = qs("#drawerCount");
+  const dCount = qs("#drawerCount");
   const c = Cart.count();
   badge.textContent = c; badge.classList.toggle("show", c > 0);
   dCount.textContent = c ? `(${c} sản phẩm)` : "";

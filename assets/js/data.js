@@ -13,12 +13,31 @@ const SITE = {
   company: "Công ty TNHH Dược Mỹ Phẩm DC COS",
   madein: "Sản xuất tại Việt Nam",
   socials: { facebook: "#", instagram: "#", tiktok: "https://www.tiktok.com/@giohangcuamtparfum" },
+
+  /* ⬇️ CHƯA CÔNG BỐ GIÁ: để false → web ẩn giá, hiện "Liên hệ" + nút đặt hàng qua Zalo.
+        Khi nào có giá chính thức, đổi thành true là giá hiện lại (giá lưu sẵn trong PRODUCTS). */
+  showPrice: false,
+  priceNote: "Giá: Liên hệ",
+  zalo: "https://zalo.me/0799909698",
 };
 
 /* Định dạng tiền Việt */
 function vnd(n) {
   return n.toLocaleString("vi-VN") + "₫";
 }
+
+/* Hiển thị giá 1 dung tích (ẩn khi chưa công bố) */
+function priceText(n) {
+  return SITE.showPrice ? vnd(n) : SITE.priceNote;
+}
+/* Hiển thị khoảng giá của cả sản phẩm */
+function priceRangeText(p) {
+  if (!SITE.showPrice) return SITE.priceNote;
+  const { min, max } = priceRange(p);
+  return min === max ? vnd(min) : `${vnd(min)} – ${vnd(max)}`;
+}
+/* Link liên hệ đặt hàng (Zalo) */
+function orderHref() { return SITE.zalo; }
 
 /* Danh sách sản phẩm — cấu trúc tái sử dụng, thêm sản phẩm mới bằng cách push thêm object */
 const PRODUCTS = [

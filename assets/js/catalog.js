@@ -3,8 +3,7 @@
    ========================================================= */
 
 function productCard(p, i) {
-  const { min, max } = priceRange(p);
-  const priceTxt = min === max ? vnd(min) : `${vnd(min)} – ${vnd(max)}`;
+  const priceTxt = priceRangeText(p);
   return `
   <article class="card reveal ${i % 3 === 1 ? "d1" : i % 3 === 2 ? "d2" : ""}">
     <div class="card__media">
@@ -34,20 +33,26 @@ function renderGrid(selector, list = PRODUCTS) {
 /* ---------- Card theo từng dung tích (dùng cho trang chủ) ---------- */
 function variantCard(p, v, i) {
   const href = `product.html?id=${p.id}&size=${v.size}`;
+  const quickBtn = SITE.showPrice
+    ? `<button class="btn qv-btn" onclick="quickAddVariant('${p.id}','${v.size}')">Thêm vào giỏ</button>`
+    : `<a class="btn qv-btn" href="${orderHref()}" target="_blank" rel="noopener">Liên hệ</a>`;
+  const priceLine = SITE.showPrice
+    ? `${vnd(v.price)} <small>/ ${v.size}</small>`
+    : `<span style="font-size:15px;letter-spacing:.06em">${SITE.priceNote}</span>`;
   return `
   <article class="card reveal ${i % 3 === 1 ? "d1" : i % 3 === 2 ? "d2" : ""}">
     <div class="card__media">
       <span class="card__badge">${v.size}</span>
       <a href="${href}"><img src="${v.image}" alt="${p.name} ${v.size}"></a>
       <div class="card__quick">
-        <button class="btn qv-btn" onclick="quickAddVariant('${p.id}','${v.size}')">Thêm vào giỏ</button>
+        ${quickBtn}
         <a class="btn btn--solid" href="${href}">Chi tiết</a>
       </div>
     </div>
     <div class="card__body">
       <h3><a href="${href}">${p.name}</a></h3>
       <div class="type">Eau de Parfum · ${v.fl}</div>
-      <div class="card__price">${vnd(v.price)} <small>/ ${v.size}</small></div>
+      <div class="card__price">${priceLine}</div>
     </div>
   </article>`;
 }
@@ -95,16 +100,18 @@ function renderQuick() {
     <div class="type" style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--bronze);margin-bottom:8px">${p.type}</div>
     <h2 style="font-size:34px;margin-bottom:10px">${p.name}</h2>
     <p style="color:var(--ink-soft);font-size:14.5px;margin-bottom:18px">${p.short}</p>
-    <div class="pdp__price" style="font-size:28px;margin-bottom:20px">${vnd(v.price)} <small>/ ${v.size}</small></div>
+    <div class="pdp__price" style="font-size:28px;margin-bottom:20px">${SITE.showPrice ? `${vnd(v.price)} <small>/ ${v.size}</small>` : SITE.priceNote}</div>
     <div class="opt-label">Dung tích</div>
     <div class="pills" style="margin-bottom:24px">
       ${p.variants.map((vr, idx) => `
         <button class="pill ${idx === QV.variantIndex ? "active" : ""}" onclick="qvSelect(${idx})">
-          ${vr.size}<small>${vnd(vr.price)}</small>
+          ${vr.size}${SITE.showPrice ? `<small>${vnd(vr.price)}</small>` : ""}
         </button>`).join("")}
     </div>
     <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <button class="btn btn--solid" style="flex:1" onclick="qvAdd()">Thêm vào giỏ</button>
+      ${SITE.showPrice
+        ? `<button class="btn btn--solid" style="flex:1" onclick="qvAdd()">Thêm vào giỏ</button>`
+        : `<a class="btn btn--solid" style="flex:1" href="${orderHref()}" target="_blank" rel="noopener">Liên hệ đặt hàng</a>`}
       <a class="btn btn--outline" href="product.html?id=${p.id}">Xem chi tiết</a>
     </div>`;
 }
