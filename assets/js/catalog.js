@@ -62,6 +62,28 @@ function renderVariantCards(selector, p = PRODUCTS[0]) {
   el.innerHTML = p.variants.map((v, i) => variantCard(p, v, i)).join("");
   initReveal();
 }
+/* ---------- Lưới POSTER (ảnh marketing có giá + tầng hương) — trang chủ ---------- */
+function renderPosterGrid(selector, p = PRODUCTS[0]) {
+  const el = qs(selector);
+  if (!el) return;
+  el.innerHTML = p.variants.map((v, i) => {
+    const href = `product.html?id=${p.id}&size=${v.size}`;
+    const img = v.poster || v.image;
+    const buyBtn = SITE.showPrice
+      ? `<button class="btn btn--solid" onclick="quickAddVariant('${p.id}','${v.size}')">Thêm vào giỏ</button>`
+      : `<a class="btn btn--solid" href="${orderHref()}" target="_blank" rel="noopener">Liên hệ</a>`;
+    return `
+    <article class="poster-item reveal ${i % 3 === 1 ? "d1" : i % 3 === 2 ? "d2" : ""}">
+      <a class="ph" href="${href}"><img src="${img}" alt="${p.name} ${v.size}" loading="lazy"></a>
+      <div class="poster-actions">
+        ${buyBtn}
+        <a class="btn btn--outline" href="${href}">Chi tiết</a>
+      </div>
+    </article>`;
+  }).join("");
+  initReveal();
+}
+
 function quickAddVariant(id, size) {
   const p = getProduct(id);
   const v = p.variants.find((x) => x.size === size) || p.variants[0];

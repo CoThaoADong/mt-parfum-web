@@ -386,11 +386,15 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.1; 
    SIZE SPEC STRIP
    ========================================================= */
 /* Lưới poster sản phẩm (ảnh có giá + tầng hương) */
-.poster-grid { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: start; max-width: 1120px; margin: 0 auto clamp(30px, 5vw, 52px); }
+.poster-grid { display: grid; grid-template-columns: 1fr; gap: 22px; align-items: start; }
 @media (min-width: 760px) { .poster-grid { grid-template-columns: repeat(3, 1fr); } }
-.poster-grid a { display: block; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--paper); transition: box-shadow .5s var(--ease), transform .5s var(--ease); }
-.poster-grid a:hover { box-shadow: 0 24px 50px -30px rgba(35,25,15,.5); transform: translateY(-4px); }
-.poster-grid img { width: 100%; height: auto; display: block; }
+.poster-item { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--paper); transition: box-shadow .5s var(--ease), transform .5s var(--ease); display: flex; flex-direction: column; }
+.poster-item:hover { box-shadow: 0 24px 50px -30px rgba(35,25,15,.5); transform: translateY(-4px); }
+.poster-item .ph { display: block; overflow: hidden; }
+.poster-item .ph img { width: 100%; height: auto; display: block; transition: transform 1s var(--ease); }
+.poster-item:hover .ph img { transform: scale(1.04); }
+.poster-item .poster-actions { display: flex; gap: 8px; padding: 14px; margin-top: auto; }
+.poster-item .poster-actions .btn { flex: 1; padding: 12px 8px; font-size: 11px; letter-spacing: .1em; }
 
 .size-visual {
   max-width: 920px; margin: 0 auto clamp(30px, 5vw, 52px);
