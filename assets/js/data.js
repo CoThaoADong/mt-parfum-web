@@ -59,7 +59,7 @@ const PRODUCTS = [
         fl: "0.34 FL.OZ",
         price: 199000,
         compareAt: 0,
-        poster: "assets/images/poster_10.jpg",
+        poster: "assets/images/poster_10.jpg?v=3",
         image: "assets/images/that_10_chai.jpg",
         gallery: [
           "assets/images/that_10_chai.jpg",
@@ -74,7 +74,7 @@ const PRODUCTS = [
         fl: "1.7 FL.OZ",
         price: 549000,
         compareAt: 0,
-        poster: "assets/images/poster_50.jpg",
+        poster: "assets/images/poster_50.jpg?v=3",
         image: "assets/images/that_50_chai.jpg",
         gallery: [
           "assets/images/that_50_chai.jpg",
@@ -90,7 +90,7 @@ const PRODUCTS = [
         fl: "3.4 FL.OZ",
         price: 899000,
         compareAt: 0,
-        poster: "assets/images/poster_100.jpg",
+        poster: "assets/images/poster_100.jpg?v=3",
         image: "assets/images/that_100_chai.jpg",
         gallery: [
           "assets/images/that_100_chai.jpg",

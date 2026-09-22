@@ -597,8 +597,15 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.1; 
 .contact-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
 .field { margin-bottom: 18px; }
 .field label { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-.field input, .field textarea { width: 100%; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; font-size: 15px; color: var(--ink); }
-.field input:focus, .field textarea:focus { outline: none; border-color: var(--bronze); }
+.field input, .field textarea, .field select { width: 100%; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; font-size: 15px; color: var(--ink); font-family: inherit; }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--bronze); }
+
+/* Trang đại lý */
+.dl-form { max-width: 560px; }
+.dl-grid2 { display: grid; grid-template-columns: 1fr; gap: 0 16px; }
+@media (min-width: 560px) { .dl-grid2 { grid-template-columns: 1fr 1fr; } }
+.dl-note { font-size: 13px; color: var(--muted); margin-top: 12px; line-height: 1.6; }
+.dl-contact { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
 .info-line { display: flex; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line); }
 .info-line svg { width: 22px; height: 22px; stroke: var(--bronze); flex: none; }
 .info-line b { display: block; font-family: var(--serif); font-size: 18px; margin-bottom: 2px; }

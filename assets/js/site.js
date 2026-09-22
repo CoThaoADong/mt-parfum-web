@@ -24,6 +24,7 @@ const NAV = [
   { label: "Trang chủ", href: "index.html", key: "home" },
   { label: "Sản phẩm", href: "products.html", key: "products" },
   { label: "Câu chuyện thương hiệu", href: "about.html", key: "about" },
+  { label: "Đại lý", href: "dai-ly.html", key: "dai-ly" },
   { label: "Liên hệ", href: "contact.html", key: "contact" },
 ];
 
@@ -147,6 +148,7 @@ function buildLayout() {
             <li><a href="products.html">Sản phẩm</a></li>
             <li><a href="product.html">Nomad Wood</a></li>
             <li><a href="about.html">Câu chuyện thương hiệu</a></li>
+            <li><a href="dai-ly.html">Đăng ký làm đại lý</a></li>
             <li><a href="contact.html">Liên hệ</a></li>
           </ul>
         </div>

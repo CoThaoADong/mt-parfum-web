@@ -38,19 +38,19 @@
     <div class="wrap">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:34px;flex-wrap:wrap;gap:12px">
         <span class="label-sm" id="count"></span>
-        <span class="label-sm">Sắp xếp: Nổi bật</span>
+        <span class="label-sm">Nomad Wood · Eau de Parfum</span>
       </div>
-      <div class="grid-products" id="allGrid"></div>
+      <div class="poster-grid" id="allGrid"></div>
     </div>
   </section>
 
-  <script src="assets/js/data.js?v=20260922c"></script>
-  <script src="assets/js/site.js?v=20260922c"></script>
-  <script src="assets/js/catalog.js?v=20260922c"></script>
+  <script src="assets/js/data.js?v=20260922d"></script>
+  <script src="assets/js/site.js?v=20260922d"></script>
+  <script src="assets/js/catalog.js?v=20260922d"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      renderGrid("#allGrid");
-      qs("#count").textContent = PRODUCTS.length + " sản phẩm";
+      renderPosterGrid("#allGrid");
+      qs("#count").textContent = PRODUCTS[0].variants.length + " dung tích";
     });
   </script>
 </body>
