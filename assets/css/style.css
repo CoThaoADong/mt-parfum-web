@@ -271,6 +271,18 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.1; 
 }
 
 /* =========================================================
+   HERO BANNER (poster KOL — ảnh ngang desktop / ảnh dọc mobile)
+   ========================================================= */
+.hero-banner { display: block; padding-top: var(--header-h); background: var(--cream); }
+.hero-banner a { display: block; }
+.hero-banner img { width: 100%; height: auto; display: block; }
+.hero-banner .hb-mobile { display: none; }
+@media (max-width: 700px) {
+  .hero-banner .hb-desktop { display: none; }
+  .hero-banner .hb-mobile { display: block; }
+}
+
+/* =========================================================
    PROCESS / NHÀ MÁY — ảnh thật sản xuất
    ========================================================= */
 .process { background: var(--dark); color: var(--cream); }
