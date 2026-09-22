@@ -110,8 +110,8 @@
     </div>
   </section>
 
-  <script src="assets/js/data.js?v=20260922d"></script>
-  <script src="assets/js/site.js?v=20260922d"></script>
+  <script src="assets/js/data.js?v=20260922e"></script>
+  <script src="assets/js/site.js?v=20260922e"></script>
   <script>
     // Nút Zalo / hotline lấy từ SITE
     document.addEventListener("DOMContentLoaded", () => {
@@ -124,13 +124,39 @@
       e.preventDefault();
       const f = e.target;
       const g = (n) => (f.elements[n]?.value || "").trim();
+      const data = {
+        hoten: g("hoten"), sdt: g("sdt"), khuvuc: g("khuvuc"),
+        kenh: g("kenh"), ghichu: g("ghichu"), trang: "dai-ly.html",
+      };
+
+      // Có Google Sheet → gửi thẳng vào Sheet
+      if (SITE.gasUrl) {
+        const btn = f.querySelector('button[type="submit"]');
+        const old = btn.textContent; btn.disabled = true; btn.textContent = "Đang gửi...";
+        try {
+          await fetch(SITE.gasUrl, {
+            method: "POST",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify(data),
+          });
+          f.reset();
+          toast("Đăng ký thành công! MT Parfum sẽ liên hệ gửi bảng giá sỉ sớm nhất.");
+        } catch (err) {
+          toast("Mạng chậm — vui lòng thử lại hoặc bấm 'Đăng ký nhanh qua Zalo'.");
+        } finally {
+          btn.disabled = false; btn.textContent = old;
+        }
+        return false;
+      }
+
+      // Chưa nối Sheet → gửi qua Zalo (sao chép sẵn tin)
       const msg =
         "🌿 ĐĂNG KÝ LÀM ĐẠI LÝ MT PARFUM\n" +
-        "• Họ tên: " + g("hoten") + "\n" +
-        "• SĐT/Zalo: " + g("sdt") + "\n" +
-        "• Khu vực: " + g("khuvuc") + "\n" +
-        "• Kênh bán: " + (g("kenh") || "(chưa chọn)") + "\n" +
-        "• Ghi chú: " + (g("ghichu") || "(không)") + "\n" +
+        "• Họ tên: " + data.hoten + "\n" +
+        "• SĐT/Zalo: " + data.sdt + "\n" +
+        "• Khu vực: " + data.khuvuc + "\n" +
+        "• Kênh bán: " + (data.kenh || "(chưa chọn)") + "\n" +
+        "• Ghi chú: " + (data.ghichu || "(không)") + "\n" +
         "→ Vui lòng gửi giúp em bảng giá sỉ. Cảm ơn MT Parfum!";
       try { await navigator.clipboard.writeText(msg); } catch (err) {}
       window.open(SITE.zalo, "_blank", "noopener");

@@ -7,7 +7,7 @@ const SITE = {
   brand: "MT PARFUM",
   sub: "Fine Fragrance",
   tagline: "Fine fragrance made with character",
-  phone: "0799 909 698",
+  phone: "0886 815 666",
   email: "hello@mtparfum.vn",
   address: "366/20H Lê Văn Quới, P. Bình Hưng Hòa, TP. Hồ Chí Minh",
   company: "Công ty TNHH Dược Mỹ Phẩm DC COS",
@@ -18,7 +18,11 @@ const SITE = {
         Khi nào có giá chính thức, đổi thành true là giá hiện lại (giá lưu sẵn trong PRODUCTS). */
   showPrice: true,
   priceNote: "Coming Soon",
-  zalo: "https://zalo.me/0799909698",
+  zalo: "https://zalo.me/0886815666",
+
+  /* ⬇️ Nối form Đăng ký đại lý vào Google Sheet: dán URL Apps Script (.../exec) vào đây.
+        Để trống "" → form tự chuyển sang gửi qua Zalo. */
+  gasUrl: "",
 };
 
 /* Định dạng tiền Việt */
