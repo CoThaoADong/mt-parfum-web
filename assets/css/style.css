@@ -385,6 +385,13 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.1; 
 /* =========================================================
    SIZE SPEC STRIP
    ========================================================= */
+/* Lưới poster sản phẩm (ảnh có giá + tầng hương) */
+.poster-grid { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: start; max-width: 1120px; margin: 0 auto clamp(30px, 5vw, 52px); }
+@media (min-width: 760px) { .poster-grid { grid-template-columns: repeat(3, 1fr); } }
+.poster-grid a { display: block; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--paper); transition: box-shadow .5s var(--ease), transform .5s var(--ease); }
+.poster-grid a:hover { box-shadow: 0 24px 50px -30px rgba(35,25,15,.5); transform: translateY(-4px); }
+.poster-grid img { width: 100%; height: auto; display: block; }
+
 .size-visual {
   max-width: 920px; margin: 0 auto clamp(30px, 5vw, 52px);
   border: 1px solid var(--line); border-radius: var(--radius);

@@ -16,7 +16,7 @@ const SITE = {
 
   /* ⬇️ CHƯA CÔNG BỐ GIÁ: để false → web ẩn giá, hiện "Liên hệ" + nút đặt hàng qua Zalo.
         Khi nào có giá chính thức, đổi thành true là giá hiện lại (giá lưu sẵn trong PRODUCTS). */
-  showPrice: false,
+  showPrice: true,
   priceNote: "Coming Soon",
   zalo: "https://zalo.me/0799909698",
 };
@@ -57,7 +57,7 @@ const PRODUCTS = [
       {
         size: "10ml",
         fl: "0.34 FL.OZ",
-        price: 250000,
+        price: 199000,
         compareAt: 0,
         image: "assets/images/that_10_chai.jpg",
         gallery: [
@@ -73,7 +73,7 @@ const PRODUCTS = [
       {
         size: "50ml",
         fl: "1.7 FL.OZ",
-        price: 690000,
+        price: 549000,
         compareAt: 0,
         image: "assets/images/that_50_chai.jpg",
         gallery: [
@@ -90,7 +90,7 @@ const PRODUCTS = [
       {
         size: "100ml",
         fl: "3.4 FL.OZ",
-        price: 1090000,
+        price: 899000,
         compareAt: 0,
         image: "assets/images/that_100_chai.jpg",
         gallery: [
